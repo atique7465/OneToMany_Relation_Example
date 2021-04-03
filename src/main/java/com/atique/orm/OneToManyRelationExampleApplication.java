@@ -9,5 +9,4 @@ public class OneToManyRelationExampleApplication {
     public static void main(String[] args) {
         SpringApplication.run(OneToManyRelationExampleApplication.class, args);
     }
-
 }
