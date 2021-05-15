@@ -33,8 +33,7 @@ public class WriterInfoServiceImpl implements WriterInfoService {
     @Override
     public Page<WriterInfoDto> getWriterInfoList(Long readerId, Pageable pageable) {
         Page<WriterInfoEntity> writerInfoEntities = writerDao.getWriterInfoList(readerId, pageable);
-        Page<WriterInfoDto> dtoPage = writerInfoEntities.map(entity -> helperService.getWriterDtoFromEntity(entity));
-        return dtoPage;
+        return writerInfoEntities.map(entity -> helperService.getWriterDtoFromEntity(entity));
     }
 
     @Override
